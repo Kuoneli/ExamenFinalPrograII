@@ -1,31 +1,34 @@
 
+
 create DATABASE examenfinal
 go
 use examenfinal
 
 CREATE TABLE Agentes (
-    ID INT identity PRIMARY KEY,
+    ID INT identity (1,1)PRIMARY KEY,
     Nombre VARCHAR(50),
+    Email VARCHAR(50),
+    Telefono VARCHAR(20)
   
 )
 go
 
 CREATE TABLE Clientes (
-    ID varchar(100),
+    ID int identity (1,1) primary key,
     Nombre VARCHAR(50),
     Email VARCHAR(100),
     Telefono VARCHAR(20)
 )
 go
 CREATE TABLE Casas (
-    ID INT  PRIMARY KEY,
+    ID INT identity (1,1) PRIMARY KEY,
     Direccion VARCHAR(100),
     Ciudad VARCHAR(50),
     Precio DECIMAL(10, 2)
 )
 go
 CREATE TABLE Ventas (
-    ID INT identity PRIMARY KEY,
+    ID INT identity (1,1) PRIMARY KEY,
     ID_Agente INT,
     ID_Cliente INT,
     ID_Casa INT,
